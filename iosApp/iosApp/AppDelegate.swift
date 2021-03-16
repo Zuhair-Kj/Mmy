@@ -1,6 +1,14 @@
-import UIKit
+//
+//  AppDelegate.swift
+//  test2
+//
+//  Created by Zuheir on 16/03/2021.
+//
 
-@UIApplicationMain
+import UIKit
+import CoreData
+
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
