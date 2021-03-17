@@ -15,8 +15,21 @@ class LoginViewController: UIViewController {
     @IBOutlet var fieldPassword: UITextField?
     let engine = ApiEngine()
 
+    var freshLaunch = true
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if (freshLaunch) {
+        let id = UserDefaults.standard.string(forKey: "UserID")
+        if (id?.isEmpty == false) {
+            proceedToMain()
+        }
+            freshLaunch = false
+        }
     }
 
 
@@ -28,6 +41,7 @@ class LoginViewController: UIViewController {
             engine.login(userName: _userName, password: _password) { (auth, error) in
                 if (auth != nil) {
                     if (auth!.id != nil) {
+                        UserDefaults.standard.set(auth!.id, forKey: "UserID") //setObject
                         self.proceedToMain()
                     } else {
                         self.showError(_message: "Incorrect username or password")

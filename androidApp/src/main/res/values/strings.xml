@@ -12,6 +12,7 @@
     <string name="phone_number">Phone number</string>
     <string name="error_wrong_email">Wrong username or password</string>
     <string name="error_update">Could not update the profile</string>
+    <string name="error_unknown">Unknown error</string>
     <string name="success_update">Profile updated</string>
     <string name="ok">Ok</string>
 </resources>

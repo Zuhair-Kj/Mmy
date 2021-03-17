@@ -16,12 +16,12 @@ class ApiEngine {
         }
     }
 
-    suspend fun login(userName: String, password: String): Auth {
+    @Throws(Exception::class) suspend fun login(userName: String, password: String): Auth {
 //        return Auth("1", null)
         return httpClient.get(PATH_LOGIN)
     }
 
-    suspend fun getProfile(userId: String): Profile {
+    @Throws(Exception::class) suspend fun getProfile(userId: String): Profile {
 //        return Profile("1", "Jack", "Jefferson", "123123", "Kuala Lumpur, Malaysia")
         return httpClient.get(PATH_PROFILE)
     }
@@ -35,7 +35,7 @@ class ApiEngine {
     }
 
     companion object {
-        private const val BASE_URL = "https://6051693a53460900176718d4.mockapi.io/"
+        private const val BASE_URL = "https://6051693a53460900176718d4.mockapi.io"
         private const val PATH_LOGIN = "$BASE_URL/auth/11"
         private const val PATH_PROFILE = "$BASE_URL/profile/1"
     }
