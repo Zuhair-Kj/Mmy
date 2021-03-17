@@ -26,4 +26,7 @@ android {
             isMinifyEnabled = false
         }
     }
+    dataBinding {
+        isEnabled = true
+    }
 }

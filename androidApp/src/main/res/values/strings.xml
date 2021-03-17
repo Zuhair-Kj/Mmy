@@ -6,4 +6,12 @@
     <string name="submit">Submit</string>
     <string name="email">Email / Username</string>
     <string name="password">Password</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="error_wrong_email">Wrong username or password</string>
+    <string name="error_update">Could not update the profile</string>
+    <string name="success_update">Profile updated</string>
+    <string name="ok">Ok</string>
 </resources>
